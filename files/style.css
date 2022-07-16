@@ -1,0 +1,959 @@
+/* Colors */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*::selection {
+  color: #ffffff;
+}
+html {
+  scroll-behavior: smooth;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgb(250, 250, 250);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset 2px -2px -2px rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset 2px -2px -2px #13d14c;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #363636;
+  margin: 0 0 10px 0;
+}
+body{
+  background: #363636;
+}
+h3 {
+  font-size: 28px;
+  line-height: 20px;
+  padding-top: 2px;
+}
+
+.btn {
+  padding: 13px 18px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn.small {
+  font-size: 13px;
+  padding: 10px 15px;
+}
+.btn.white {
+  border-color: white;
+  color:white;
+}
+.btn.white:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btn.white::after {
+  background: url("https://bausucht.net/assets/images/arrow-right_black.svg") no-repeat center, white;
+  background-size: 8px;
+  color:white;
+}
+.btn.black {
+  color:white;
+}
+.btn.black::after {
+  background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+  background-size: 8px;
+}
+.btn.black:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.btn::after {
+  display: block;
+  position: absolute;
+  right: -30px;
+  width: 30px;
+  height: calc(100% + 4px);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  content: '';
+  top: -2px;
+}
+/* Container */
+.container {
+  margin: 130px auto;
+  width: 1280px;
+}
+/* Centered Head */
+.centered-head {
+  width: 768px;
+  margin: auto;
+  text-align: center;
+}
+.centered-head.with-margin {
+  margin-bottom: 40px;
+}
+
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-300.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-500.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('https://bausucht.net/assets/fonts/roboto-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/roboto-v19-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins Bold'), local('Poppins-Bold'), url('https://bausucht.net/assets/fonts/poppins-v8-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/poppins-v8-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* heroes legend */
+@font-face {
+  font-family: 'Heroes Legend';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Heroes Legend'), local('Heroes Legend'), url('https://bausucht.net/assets/fonts/heroes-legend.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('https://bausucht.net/assets/fonts/heroes-legend.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'sans-serif';
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
+}
+#nav-toggler {
+  width: 26px;
+  height: 26px;
+  direction: rtl;
+  position: fixed;
+  top: 35px;
+  right: 35px;
+  z-index: 10;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+#nav-toggler span {
+  width: 100%;
+  height: 3px;
+  border-radius: 100px;
+  background: white;
+  display: block;
+  margin-bottom: 8px;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+#nav-toggler span:first-of-type {
+  width: 80%;
+}
+#nav-toggler span:last-of-type {
+  width: 60%;
+}
+#nav-toggler span:last-of-type {
+  margin-bottom: 0;
+}
+#nav-toggler.opened span {
+  display: none;
+  background: #262626;
+  width: 100%;
+}
+#nav-toggler.opened span:last-of-type {
+  display: block;
+  transform: rotate(-45deg);
+}
+#nav-toggler.opened span:first-of-type {
+  display: block;
+  transform: rotate(45deg);
+  top: 11px;
+  position: relative;
+}
+#nav-toggler.fixed {
+  background: #262626;
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+#nav-toggler.fixed span {
+  background: white;
+}
+nav#nav-main {
+  width: 100%;
+  position: fixed;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 5;
+}
+nav#nav-main ul {
+  width: 1255px;
+  margin: auto;
+  padding: 70px 0 55px;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul #dropdown {
+  display: inline-block;
+  position: relative;
+}
+nav#nav-main ul #dropdown:hover li {
+  padding-bottom: 25px;
+}
+nav#nav-main ul #dropdown:hover #dropdown-menu {
+  opacity: 1;
+  z-index: 2;
+}
+nav#nav-main ul #dropdown #dropdown-menu {
+  position: absolute;
+  background: #262626;
+  border-radius: 5px;
+  opacity: 0;
+  right: 0;
+  top: 30px;
+  z-index: -1;
+  width: 170px;
+  text-align: left;
+  border: 2px #262626 solid;
+}
+nav#nav-main ul #dropdown #dropdown-menu li {
+  padding: 10px !important;
+  margin: 0;
+}
+nav#nav-main ul #dropdown #dropdown-menu li a {
+  color: #262626;
+}
+nav#nav-main ul #dropdown #dropdown-menu img {
+  filter: none;
+  width: 22px;
+}
+nav#nav-main ul li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:white;
+}
+nav#nav-main ul li:hover {
+  opacity: 1;
+}
+nav#nav-main ul li#vertical-line {
+  width: 2px;
+  height: 15px;
+  background: white;
+  opacity: 0.5;
+  vertical-align: middle;
+}
+nav#nav-main ul li#signout img {
+  margin: 0 0 0 10px;
+}
+nav#nav-main ul li#link-active {
+  opacity: 1;
+}
+nav#nav-main ul li#signin-as {
+  position: relative;
+}
+nav#nav-main ul li#signin-as::after {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #262626;
+  transform: rotate(45deg);
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -22px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul li img {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+  opacity: 0.6;
+  position: relative;
+  top: -1px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+nav#nav-main ul li a {
+  color: white;
+  font-family: 'Roboto', 'sans-serif';
+  text-decoration: none;
+  font-size: 14px;
+}
+nav#nav-main h3 {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:#262626;
+}
+nav#nav-main #right-btn {
+  position: absolute;
+  top: 55px;
+  right: 70px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:white;
+}
+nav#nav-main #right-btn::after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color:#262626;
+}
+footer {
+  overflow-y: auto;
+  background: url("./footer.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+}
+footer a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #262626;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+}
+footer a:hover {
+  opacity: 0.7;
+}
+footer .container {
+  margin: 90px auto;
+}
+footer #footer-copyright {
+  background: #363636;
+  padding: 18px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
+@media only screen and (max-width: 560px) {
+  /* Universal */
+  #nav-toggler {
+    display: block;
+  }
+
+  .secondImage {
+    max-width: 250px;
+  }
+
+  nav#nav-main {
+    background: white;
+    overflow-y: hidden;
+    max-height: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+  }
+  nav#nav-main.visible {
+    max-height: 1000px;
+  }
+  nav#nav-main h3 {
+    text-align: center;
+    margin-right: 22px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-family: 'Heroes Legend', 'sans-serif';
+  }
+  nav#nav-main ul {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav#nav-main ul #dropdown:hover li {
+    padding: 8px 0;
+  }
+  nav#nav-main ul #dropdown:hover #dropdown-menu {
+    max-height: 1000px;
+  }
+  nav#nav-main ul #dropdown #dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    text-align: center;
+    right: unset;
+    top: unset;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav#nav-main ul li {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+  }
+  nav#nav-main ul li a {
+    color: #363636;
+    font-size: 16px;
+  }
+  nav#nav-main #right-btn {
+    position: relative;
+    border-color: #363636;
+    color: #363636;
+    right: unset;
+    top: unset;
+    display: table;
+    margin: 0 auto 35px auto;
+    left: -15px;
+  }
+  nav#nav-main #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+    height: 100%;
+    top: 0;
+  }
+  nav#nav-main #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  #clan-info .container .container-content .dataTables_wrapper {
+    max-width: calc(100% + 90px);
+    overflow-x: scroll;
+    margin: 0 -45px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper table {
+    margin: 0;
+    width: 100%;
+  }
+  #clan-info .container .centered-head#main {
+    width: 50%;
+    top: -200px;
+  }
+  #clan-info .container .centered-head#main .grid .row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  /* Bauwert */
+  #bauwert-overview,
+  #bauwert-product {
+    top: -90px;
+  }
+  #bauwert-overview .container .grid .row.col-25_75,
+  #bauwert-product .container .grid .row.col-25_75 {
+    grid-template-columns: 100% !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    margin: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul {
+    margin: 0;
+    padding: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul:last-of-type {
+    margin-bottom: 0 !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li {
+    list-style: none;
+    padding: 5px 0;
+    opacity: 0.6;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li:last-of-type,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li#point-active,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li#point-active {
+    opacity: 1;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    color: #363636;
+    text-decoration: none;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    opacity: 1;
+    max-height: 10000px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible ul {
+    margin: 0 0 25px 0;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible h4 {
+    margin-top: -5px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar.visible #sidebar-toggler {
+    margin-bottom: 20px;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4 {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar #sidebar-toggler,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar #sidebar-toggler {
+    text-align: center;
+    display: block;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-image,
+  #bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-image {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-pricing-history .row .column,
+  #bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-pricing-history .row .column {
+    overflow: scroll;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  /* Universal */
+  #nav-toggler {
+    display: block;
+  }
+  nav#nav-main {
+    background: white;
+    overflow-y: hidden;
+    max-height: 0;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+  }
+  nav#nav-main.visible {
+    max-height: 1000px;
+  }
+  nav#nav-main h3 {
+    text-align: center;
+    margin-right: 22px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-family: 'Heroes Legend', 'sans-serif';
+  }
+  nav#nav-main ul {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 20px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  nav#nav-main ul #dropdown:hover li {
+    padding: 8px 0;
+  }
+  nav#nav-main ul #dropdown:hover #dropdown-menu {
+    max-height: 1000px;
+  }
+  nav#nav-main ul #dropdown #dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    text-align: center;
+    right: unset;
+    top: unset;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  nav#nav-main ul li {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+  }
+  nav#nav-main ul li a {
+    color: white;
+    font-size: 16px;
+  }
+  nav#nav-main #right-btn {
+    position: relative;
+    border-color: white;
+    color: white;
+    right: unset;
+    top: unset;
+    display: table;
+    margin: 0 auto 35px auto;
+    left: -15px;
+  }
+  nav#nav-main #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, white;
+    background-size: 8px;
+    height: 100%;
+    top: 0;
+  }
+  nav#nav-main #right-btn:hover {
+    background: white;
+  }
+  .container {
+    width: 85%;
+  }
+  .grid .row {
+    margin: 0 -10px -35px -10px !important;
+    grid-template-columns: 50% 50% !important;
+  }
+  .grid .row .column {
+    margin: 0 10px 35px 10px !important;
+  }
+  .grid .row.autoflow .column {
+    margin: 0 20px !important;
+  }
+  .grid .row.autoflow.col-33,
+  .grid .row.autoflow.col-50 {
+    grid-template-columns: repeat(1000, 50%) !important;
+  }
+  .centered-head {
+    width: 100%;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 90px;
+  }
+  #about p {
+    width: 100% !important;
+  }
+  #team .slide-control#scroll-right {
+    right: -40px;
+  }
+  #team .slide-control#scroll-left {
+    left: -40px;
+  }
+  #clan-info {
+    top: -170px;
+  }
+  #clan-info .container {
+    margin: 0 auto;
+  }
+  #clan-info .container .container-content.visible {
+    max-height: 10000px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper {
+    max-width: calc(100% + 90px);
+    overflow-x: scroll;
+    margin: 0 -45px;
+  }
+  #clan-info .container .container-content .dataTables_wrapper table {
+    margin: 0;
+    width: 100%;
+  }
+  #clan-info .container .centered-head#main {
+    width: 50%;
+    top: -100px;
+  }
+  #clan-info .container .centered-head#main .grid .row {
+    display: grid;
+    grid-template-columns: repeat(4, 25%) !important;
+  }
+  /* Bauwert */
+  #bauwert-overview,
+  #bauwert-product {
+    top: -90px;
+  }
+  #bauwert-overview .container .grid .row.col-25_75,
+  #bauwert-product .container .grid .row.col-25_75 {
+    grid-template-columns: 35% 65% !important;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar h4,
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    max-width: 99%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-sidebar ul li a,
+  #bauwert-product .container .grid .row .column#bauwert-sidebar ul li a {
+    display: inline-block;
+  }
+  #bauwert-overview .container .grid .row .column#bauwert-product-description #product-pricing-history .row .column,
+  #bauwert-product .container .grid .row .column#bauwert-product-description #product-pricing-history .row .column {
+    overflow: scroll;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  #clans-overview .container .dataTables_wrapper {
+    overflow-x: auto;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1366px) {
+  /* Universal */
+  nav#nav-main img {
+    filter: none;
+  }
+  nav#nav-main.fixed {
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+  nav#nav-main.fixed h3 {
+    color: #363636;
+    top: 20px;
+  }
+  nav#nav-main.fixed ul {
+    padding: 30px 0;
+    width: 90%;
+  }
+  nav#nav-main.fixed ul li a {
+    color: #363636;
+  }
+  nav#nav-main.fixed #right-btn {
+    color: #363636;
+    border-color: #363636;
+    top: 15px;
+  }
+  nav#nav-main.fixed #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+  }
+  nav#nav-main.fixed #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  nav#nav-main h3 {
+    color: white;
+    left: 60px;
+    top: 60px;
+    position: absolute;
+  }
+  .container {
+    width: 90%;
+  }
+  #team .slide-control#scroll-right {
+    right: -40px;
+  }
+  #team .slide-control#scroll-left {
+    left: -40px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  /* Components */
+  h1 {
+    max-width: 99%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    padding: 38px;
+    box-sizing: border-box;
+  }
+  /* Universal */
+  nav#nav-main {
+    height: 79px;
+  }
+  nav#nav-main li img {
+    filter: invert(1);
+  }
+  nav#nav-main.fixed {
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  }
+  nav#nav-main.fixed h3 {
+    color: #363636;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav#nav-main.fixed ul {
+    padding: 30px 0;
+  }
+  nav#nav-main.fixed ul li a {
+    color: #363636;
+  }
+  nav#nav-main.fixed ul li img {
+    filter: none;
+  }
+  nav#nav-main.fixed ul li#vertical-line {
+    background: #363636;
+  }
+  nav#nav-main.fixed ul li#signin-as::after {
+    border-top-color: transparent;
+    border-right-color: #363636;
+  }
+  nav#nav-main.fixed #right-btn {
+    color: #363636;
+    border-color: #363636;
+    top: 15px;
+  }
+  nav#nav-main.fixed #right-btn::after {
+    background: url("https://bausucht.net/assets/images/arrow-right_white.svg") no-repeat center, #363636;
+    background-size: 8px;
+  }
+  nav#nav-main.fixed #right-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  nav#nav-main h3 {
+    color: white;
+    left: 60px;
+    position: absolute;
+    top: 68px;
+  }
+}
+
+
+#bauwert-product .container .grid .row .column#bauwert-product-description .wrapper .row .column #product-information h5 {
+  color: #4f9e4f;
+}
+
+/*# sourceMappingURL=all.css.map */
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  opacity: 1;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: auto;
+}
+
+#bauwert-overview .pagination,
+#bauwert-product .pagination {
+  margin-top: 22px;
+}
+#bauwert-overview .pagination span,
+#bauwert-product .pagination span {
+  margin: 0 13px;
+}
+#bauwert-overview .pagination span a,
+#bauwert-product .pagination span a {
+  font-size: 17px;
+  color: #363636;
+  opacity: 0.5;
+  display: inline-block;
+  height: 25px;
+  width: 27px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 23px;
+  transition: 0.3s;
+}
+#bauwert-overview .pagination span a:hover,
+#bauwert-product .pagination span a:hover {
+  background: #ddd;
+}
+#bauwert-overview .pagination span a.current,
+#bauwert-product .pagination span a.current {
+  opacity: 1;
+  background: #363636;
+  color: white;
+}
+#bauwert-overview .pagination .paginate_button,
+#bauwert-product .pagination .paginate_button {
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+}
